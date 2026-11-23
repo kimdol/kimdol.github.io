@@ -22,12 +22,6 @@ camera.lookAt(s.lookX, 0, s.lookZ - drift)
 
 기둥과 바닥 가로선, 링은 카메라를 기준으로 반복 배치한다. 마지막 작품 뒤에도 구조물이 앞으로 이어지고, 스크롤을 멈추면 카메라가 천천히 전진한다.
 
-## 프로젝트 데이터
-
-- [projects.json](projects.json) — 프로젝트 소개, 기술 스택, 담당 업무, 이미지, 영상 링크
-- [assets/projects](assets/projects) — 대표 이미지와 갤러리
-- [studio.html](https://kimdol.github.io/studio.html) — 프로젝트 초안 편집 및 JSON 내보내기
-
 ## 로컬 실행
 
 ```sh
