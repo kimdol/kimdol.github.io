@@ -11,6 +11,69 @@
   },
   "projects": [
     {
+      "id": "department-budget",
+      "title": "부서예산",
+      "posterTitle": "DEPARTMENT\nBUDGET",
+      "subtitle": "교육비·출장비 신청, 승인, 정산",
+      "category": "Web",
+      "year": "2026",
+      "type": "BUDGET WORKFLOW",
+      "image": "assets/projects/department-budget-inbox.png",
+      "accent": "#75bbff",
+      "tags": [
+        "Java 21",
+        "Spring Boot",
+        "MyBatis",
+        "Oracle",
+        "React / TypeScript",
+        "JSP / jQuery"
+      ],
+      "summary": "교육비·출장비 신청부터 부서장 승인, 재무 정산까지 하나의 신청번호로 추적하는 웹 서비스.",
+      "description": "직원은 교육비·출장비를 신청하고, 부서장은 같은 신청번호로 승인하며, 재무 담당자는 증빙을 검토해 정산합니다. React·TypeScript 신청함과 JSP·jQuery 결재함은 같은 Spring Boot API를 사용합니다. 공개 데모에서는 가입 없이 합성 데이터로 전체 흐름을 체험할 수 있습니다.",
+      "role": "개인 프로젝트 · 업무 흐름·DB 설계, 프론트엔드·API 구현, 통합 테스트·배포",
+      "duration": "2026 · Oracle Cloud HTTPS 배포",
+      "challenge": "같은 부서의 승인 요청이 겹치거나 정산 요청을 다시 보내도 가용 예산과 전표가 일관되게 유지되어야 했습니다.",
+      "features": [
+        "역할별 신청·사전승인·증빙 제출·정산과 처리 이력 조회",
+        "예산 행 잠금 후 가용액 재확인으로 동시 승인 시 초과 집행 방지",
+        "처리 차수 확인으로 정산을 재시도해도 전표와 집행액 중복 방지"
+      ],
+      "demoUrl": "https://129-225-133-96.sslip.io/",
+      "demoLabel": "부서예산 데모 열기",
+      "sourceUrl": "https://github.com/kimdol/department-budget",
+      "readmeUrl": "",
+      "links": [
+        {
+          "label": "아키텍처 · ERD",
+          "url": "https://github.com/kimdol/department-budget/blob/main/docs/ARCHITECTURE.md"
+        },
+        {
+          "label": "Oracle 검증 기록",
+          "url": "https://github.com/kimdol/department-budget/blob/main/docs/measurements/README.md"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/department-budget-inbox.png",
+          "caption": "직원 신청함 · 보완 사유를 확인하고 증빙을 첨부해 다시 제출할 수 있습니다."
+        },
+        {
+          "src": "assets/projects/department-budget-approval.png",
+          "caption": "신청 내역 · 부서장 사전승인 후 200,000원이 약정된 상태입니다."
+        },
+        {
+          "src": "assets/projects/department-budget-receipt.png",
+          "caption": "증빙 첨부 · 합성 영수증을 선택하고 금액을 확인합니다."
+        },
+        {
+          "src": "assets/projects/department-budget-balance.png",
+          "caption": "정산 결과 · 약정 잔액 0원, 누적 집행액 180,000원, 가용 예산 820,000원."
+        }
+      ],
+      "videos": [],
+      "sourceNote": "공개 데모 검증에서 정산 응답이 끊겨 같은 요청을 다시 보내도 전표는 1건, 집행액은 180,000원으로 유지됐습니다."
+    },
+    {
       "id": "syntaxbridge-studio",
       "title": "SyntaxBridge Studio",
       "posterTitle": "SYNTAX\nBRIDGE",
