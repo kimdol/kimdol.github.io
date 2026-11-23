@@ -49,7 +49,7 @@
       "gallery": [
         {
           "src": "assets/projects/syntax-cover.jpg",
-          "caption": "SyntaxBridge Studio · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+          "caption": "Python 코드와 설명을 함께 보는 학습 화면"
         },
         {
           "src": "assets/projects/syntaxbridge-mapping-before.png",
@@ -89,7 +89,6 @@
           "codeUrl": ""
         }
       ],
-      "sourceNote": "공개 서비스와 제공된 로컬 프로젝트의 README·JavaScript·PHP 코드를 바탕으로 정리했습니다.",
       "mappingDemo": {
         "before": "assets/projects/syntaxbridge-mapping-before.png",
         "after": "assets/projects/syntaxbridge-mapping-after.png"
@@ -137,7 +136,7 @@
       "gallery": [
         {
           "src": "assets/projects/tft-cover.jpg",
-          "caption": "TFT 팀 조합 추천기 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+          "caption": "후보 유닛 선택 화면"
         }
       ],
       "videos": [],
@@ -164,7 +163,7 @@
           "codeUrl": "https://github.com/kimdol/my-tft-app/blob/main/vite-project/src/features/api/tftApi.ts"
         }
       ],
-      "sourceNote": "README와 공개 소스, 운영 웹 앱을 바탕으로 정리했습니다. Riot Games가 후원하거나 보증하는 공식 앱이 아닌 팬 프로젝트입니다."
+      "sourceNote": "TFT 팬 프로젝트입니다. Riot Games의 후원이나 보증을 받지 않았습니다."
     },
     {
       "id": "unreal-combat",
@@ -202,7 +201,7 @@
       "gallery": [
         {
           "src": "assets/projects/unreal-cover.jpg",
-          "caption": "Unreal 전투 게임 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+          "caption": "XBot Mage AI 전투 시연"
         },
         {
           "src": "assets/projects/unreal-ai.png",
@@ -254,8 +253,7 @@
           "result": "계산 결과가 양수일 때 체력에 modifier를 적용하고, 속성 변화는 이벤트로 UI에 전달하도록 구성했습니다.",
           "codeUrl": "https://github.com/kimdol/Unreal_Project/blob/main/Combat_Centric_Game/Source/Combat_Centric_Game/Private/BasicDamageCalculate.cpp"
         }
-      ],
-      "sourceNote": "대표 이미지는 본인 XBot Mage AI 시연 영상의 실제 플레이 화면을 다시 촬영해 구성했습니다. 구현 내용은 GitHub README·C++ 소스와 연결된 본인 시연 영상을 바탕으로 정리했습니다."
+      ]
     },
     {
       "id": "unity-arpg",
@@ -293,7 +291,7 @@
       "gallery": [
         {
           "src": "assets/projects/unity-cover.jpg",
-          "caption": "Unity ARPG · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+          "caption": "인벤토리와 장비 UI · 시연 영상 1:05"
         },
         {
           "src": "assets/projects/arpg-inventory.png",
@@ -325,8 +323,7 @@
           "result": "객체 재사용과 비동기적 문장 출력을 별도 시스템으로 구성해 게임플레이와 UI의 책임을 나눴습니다.",
           "codeUrl": "https://github.com/kimdol/Portfolio/tree/master/ARPG/Assets/ARPG/PrefabCacheSystem"
         }
-      ],
-      "sourceNote": "대표 이미지는 본인 프로젝트 설명 영상 1분 5초의 실제 플레이 화면을 다시 촬영해 구성했습니다. 갤러리의 구조도는 README 자료입니다."
+      ]
     },
     {
       "id": "cpp-directx-lab",
@@ -364,7 +361,7 @@
       "gallery": [
         {
           "src": "assets/projects/cpp-cover.jpg",
-          "caption": "C++ · DirectX 실습 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+          "caption": "BuggHouse 플레이 화면"
         },
         {
           "src": "assets/projects/bugghouse.png",
@@ -396,8 +393,7 @@
           "result": "데이터 로딩·업데이트·렌더링을 분리하고 디바이스 재생성 시 리소스를 다시 준비하는 흐름을 학습했습니다.",
           "codeUrl": "https://github.com/kimdol/GameClass/blob/main/DirectXTK/Game.cpp"
         }
-      ],
-      "sourceNote": "학습 프로젝트입니다. README의 실습 목록·실행 이미지와 DirectXTK 소스를 바탕으로 정리했습니다."
+      ]
     }
   ]
 }

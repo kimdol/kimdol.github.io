@@ -59,7 +59,6 @@ updateMotion();
 function renderProfile(){
   const profile=data.profile;$('#profile-bio').textContent=profile.bio;document.title=`${profile.name} — ${profile.title}`;
   $('.archive-meta>span:first-child').innerHTML=profile.demo?'DEMO COLLECTION <span class="demo-dot"></span> 예시 프로젝트':'PROJECT COLLECTION <span class="demo-dot"></span> 프로젝트 아카이브';
-  $('.archive-note').hidden=!profile.demo;
   $('#copyright-name').textContent=profile.name;
   $$('.brand').forEach(el=>{if(!el.classList.contains('footer-brand')){el.innerHTML=`<span class="brand-icon" aria-hidden="true">${escapeHTML(profile.name[0].toLowerCase())}</span>${escapeHTML(profile.name)}<span class="brand-dot">/ DEV</span>`;el.setAttribute('aria-label',`${profile.name} 홈`);}else el.textContent=profile.name;});
 

@@ -1,45 +1,38 @@
 # KIMDOL — Game & Web Developer
 
-Unity, Unreal Engine, C++·DirectX, 웹·Android 및 학습 도구 프로젝트를 모은 개인 포트폴리오입니다.
+Unity, Unreal Engine, C++·DirectX, 웹·Android 프로젝트를 모은 포트폴리오. 첫 화면에서 프로젝트를 기술별로 찾아보고, 아래 터널에서 각 프로젝트의 시연 화면을 볼 수 있다.
 
-- GitHub Pages: https://kimdol.github.io/
-- 기존 ChatGPT Sites: https://kimdol-portfolio.rlagkd2451.chatgpt.site/
+[포트폴리오](https://kimdol.github.io/) · [3D 터널](https://kimdol.github.io/#screening)
 
-두 주소는 별도로 호스팅됩니다. 이 저장소를 수정해도 기존 Sites 배포본은 자동으로 바뀌지 않습니다.
+## 3D 터널
 
-## 프로젝트 추가·수정
+[portal.js](portal.js#L119)에서 스크롤 위치를 0~1 사이의 진행률로 바꾼다. 프로젝트마다 카메라가 빠르게 접근하고, 화면 앞에서 잠깐 감속한 뒤 포털을 통과한다. 통과할 때는 시야각이 넓어지고 링과 빛이 강해진다.
 
-`projects.json`에서 프로젝트 내용·링크·이미지 경로를 편집하고 `assets/projects/`에 이미지를 추가하세요. 기존 프로젝트의 필드를 복사하면 기술 필터·상세 화면·3D 포털에 함께 반영됩니다. 영상은 YouTube 링크를 사용합니다.
+아래는 [프레임 갱신 코드](portal.js#L146)에서 카메라 이동만 발췌한 부분이다. `sample()`이 현재 위치와 다음 시선을 계산한다. 마지막 포털을 지나면 `cruise`가 쌓이고, 위치와 시선을 같은 거리만큼 전진시킨다.
 
-`studio.html`은 브라우저 내 초안 편집 도구입니다. JSON을 내보낸 뒤 이 저장소의 `projects.json`을 교체하고 커밋해야 공개 사이트에 반영됩니다.
+```js
+currentP = mix(currentP, targetP, 1 - Math.exp(-dt * 9))
+const s = sample(currentP)
+cruise = s.tail > 0 ? cruise + dt * 2.8 * smooth(s.tail) : 0
+const drift = cruise * smooth(s.tail)
 
-## 로컬 확인
+camera.position.set(s.x + px * .25, .3 + py * .18, s.z - drift)
+camera.lookAt(s.lookX, 0, s.lookZ - drift)
+```
 
-Node.js가 있으면 별도 패키지 설치 없이 실행할 수 있습니다.
+기둥과 바닥 가로선, 링은 카메라를 기준으로 반복 배치한다. 마지막 작품 뒤에도 구조물이 앞으로 이어지고, 스크롤을 멈추면 카메라가 천천히 전진한다.
+
+## 프로젝트 데이터
+
+- [projects.json](projects.json) — 프로젝트 소개, 기술 스택, 담당 업무, 이미지, 영상 링크
+- [assets/projects](assets/projects) — 대표 이미지와 갤러리
+- [studio.html](https://kimdol.github.io/studio.html) — 프로젝트 초안 편집 및 JSON 내보내기
+
+## 로컬 실행
 
 ```sh
-npm run check
 npm run dev
-```
-
-GitHub Pages 설정은 `main` 브랜치의 루트(`/`)를 게시하도록 구성합니다. HTML·CSS·JavaScript와 Three.js·폰트가 저장소에 포함되어 있으며 유료 API나 빌드 서비스가 필요하지 않습니다.
-
-## 최신 Sites 소스에서 동기화
-
-소스 폴더를 최신 Sites 버전으로 동기화한 뒤 다음 명령으로 공개 파일만 복사할 수 있습니다. 이 명령은 공개 홈페이지를 방문하지 않습니다.
-
-```sh
-node scripts/sync-from-sites.mjs --source "F:/DeveloperPortfolio/audit-v9"
 npm run check
-git add .
-git commit -m "Update portfolio"
-git push origin main
 ```
 
-`--source`는 `.openai/hosting.json`과 `dist/`가 있는 최신 소스 폴더여야 합니다. 스크립트는 `dist/`만 복사하고 GitHub Pages의 canonical 주소를 유지합니다. Sites 쪽 배포는 별도입니다.
-
-## 보관
-
-GitHub의 **Code → Download ZIP** 또는 `git clone https://github.com/kimdol/kimdol.github.io.git`으로 로컬 사본을 보관할 수 있습니다. 무료 호스팅은 서비스 정책과 계정 상태에 따르며, 영구 제공을 보장하는 상품은 아닙니다.
-
-자체 코드 라이선스는 `LICENSE`, 외부 라이브러리·폰트의 라이선스는 `THIRD-PARTY.md`와 각 자산의 라이선스 파일을 확인하세요. 프로젝트 화면·게임 및 팬 프로젝트 자산에는 해당 권리자의 권리가 적용됩니다.
+HTML, CSS, JavaScript, Three.js. GitHub Pages는 `main` 브랜치의 루트에서 배포한다.
