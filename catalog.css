@@ -1,0 +1,63 @@
+/* Browse first, cinematic journey second. */
+.catalog-first .card-art img{filter:none;object-fit:cover}
+.catalog-first .card-art:after,.catalog-first.cinematic .card-art:before{display:none}
+.catalog-first .project-open:hover .card-art img{filter:none;transform:scale(1.025)}
+.catalog-first .card-topline,.catalog-first .card-title-art{display:none}
+.catalog-first .card-open-icon{display:none}
+.catalog-first .header{position:relative;height:78px;max-width:1440px;margin:0 auto;border-bottom:1px solid #b1d16b1c;background:transparent}
+.catalog-first .header nav{gap:23px}
+.catalog-first .header .motion-control{position:static;font-size:0;letter-spacing:0;padding:7px}
+.catalog-first .header .motion-control span{font-size:18px}
+.catalog-first .work{padding:35px 0 70px;background:radial-gradient(ellipse at 50% 0,#b7df5e07,transparent 65%)}
+.catalog-first .work>.section-top{margin-bottom:10px;align-items:center}
+.catalog-first #work-heading{font-family:var(--font);font-size:clamp(38px,4.6vw,62px);line-height:1.1;letter-spacing:-2.7px;font-weight:600;margin:0}
+.catalog-first #work-heading span{color:var(--lime)}
+.catalog-lead{max-width:1440px;margin:0 auto 24px;padding:0 6%;font-size:12px;color:#96a785;line-height:1.8}
+.catalog-first .work-fallback{display:block;max-width:1440px;padding:0 6%;margin:auto}
+.catalog-first .work-toolbar{padding-bottom:23px;margin:0;gap:15px}
+.catalog-first .filters button{padding:9px 16px;font-size:11px}
+.catalog-first .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 24px;align-items:start}
+.catalog-first .project-card{min-width:0;perspective:none;overflow:hidden;border:1px solid #b3ce7926;border-radius:8px;background:linear-gradient(150deg,#1720136b,#080d097a);transition:border-color .25s,box-shadow .25s}
+.catalog-first .project-card:last-child:nth-child(odd){grid-column:auto}
+.catalog-first .project-card:hover{border-color:#cee88865;box-shadow:0 14px 40px #0007}
+.catalog-first .project-card:nth-child(n) .project-open{display:flex;flex-direction:column;gap:0;align-items:stretch;transform:none;transition:none;width:100%;text-align:left;transform-style:flat;will-change:auto}
+.catalog-first .project-card:nth-child(n) .card-art{order:0;aspect-ratio:1.8;width:100%;border:0;border-bottom:1px solid #a4bf6230;border-radius:0;box-shadow:none;transform:none}
+.catalog-first .project-card:nth-child(n) .card-info{order:1;padding:17px 18px 0;transform:none}
+.catalog-first .project-card:nth-child(n) .card-heading h3{font-size:18px;line-height:1.35;font-weight:600}
+.catalog-first .project-card:nth-child(n) .card-info p{font-size:11px;line-height:1.85;margin:10px 0 13px;min-height:41px;color:#9cad8f;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.catalog-first .project-card:nth-child(n) .card-title-art{font-size:clamp(40px,4vw,64px)}
+.catalog-first .card-tags{gap:5px}.catalog-first .card-tags span{font-size:8px;padding:4px 6px}
+.catalog-first .card-resource-links{display:flex;justify-content:flex-start;gap:8px 15px;flex-wrap:wrap;padding:11px 18px 15px;margin:14px 0 0;border-top:1px solid #afc66e1a}
+.catalog-first .card-resource-links a,.catalog-first .card-resource-links button{font-size:10px;padding:5px 0;line-height:1.6;color:#c1d3aa}
+.catalog-first .card-resource-links .store-link{font-size:10px;padding:5px 9px}
+.catalog-first .hero-error{position:relative;inset:auto;margin:20px 6%}
+.journey-section{background:#030608;border-top:1px solid #b1d16b26}
+.journey-intro{max-width:1440px;padding:65px 6% 35px;margin:auto}
+.journey-intro h2{font-family:var(--display);font-size:clamp(52px,7vw,98px);font-weight:600;letter-spacing:-1.5px;line-height:.95;margin:0 0 18px}
+.journey-intro h2 span{color:#b8d788}
+.journey-intro p{font-size:12px;line-height:1.8;color:#9caf8e;margin:0}
+.catalog-first:not(.portal-enabled) .journey-section{display:none}
+.catalog-first:not(.portal-enabled) .journey-nav{display:none}
+.catalog-first .portal-sequence{scroll-margin-top:0}
+@media(max-width:1100px){.catalog-first .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+ .catalog-first .header{height:70px;padding:0 6%}
+ .catalog-first .header nav{gap:13px;font-size:10px}
+ .catalog-first .header .motion-control{padding:3px}
+ .catalog-first .header .motion-control span{font-size:16px}
+ .catalog-first .brand{font-size:20px;gap:7px}
+ .catalog-first .work{padding-top:26px;padding-bottom:45px}
+ .catalog-first #work-heading{font-size:40px;letter-spacing:-2px}
+ .catalog-lead{font-size:11px;margin-bottom:20px}
+ .catalog-first .work-toolbar{gap:11px;padding-bottom:20px}
+ .catalog-first .filters{justify-content:flex-start;gap:5px}
+ .catalog-first .filters button{font-size:10px;padding:8px 11px}
+ .catalog-first .project-grid{grid-template-columns:1fr;gap:23px}
+ .catalog-first .project-card:nth-child(n) .card-info{padding:16px 17px 0}
+ .catalog-first .project-card:nth-child(n) .card-heading h3{font-size:18px}
+ .catalog-first .project-card:nth-child(n) .card-title-art{font-size:55px}
+ .catalog-first .card-resource-links{padding:10px 17px 14px}
+ .journey-intro{padding:43px 6% 27px}
+ .journey-intro h2{font-size:54px}
+ .journey-intro p{font-size:11px}
+}

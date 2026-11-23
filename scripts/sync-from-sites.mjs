@@ -1,0 +1,17 @@
+import {cp,readFile,writeFile,stat} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const [flag,source,...extra]=process.argv.slice(2);
+if(flag!=='--source'||!source||extra.length)throw Error('Usage: node scripts/sync-from-sites.mjs --source <latest Sites checkout>');
+const root=fileURLToPath(new URL('../',import.meta.url)),input=path.resolve(source);
+const manifest=JSON.parse(await readFile(path.join(input,'.openai/hosting.json'),'utf8'));
+if(manifest.project_id!=='appgprj_6adf6a9d6264819199055ab8a1422294'||manifest.static?.directory!=='dist')throw Error('Expected the existing static KIMDOL Sites project.');
+const dist=path.join(input,'dist');
+if(path.resolve(dist)===path.resolve(root))throw Error('Source and destination must be different.');
+await stat(path.join(dist,'index.html'));
+await cp(dist,root,{recursive:true});
+const index=path.join(root,'index.html');
+let html=await readFile(index,'utf8');
+html=html.replace(/(<link rel="canonical" href=")[^"]+("\s*>)/,'$1https://kimdol.github.io/$2').replace(/(<meta property="og:url" content=")[^"]+("\s*>)/,'$1https://kimdol.github.io/$2');
+await writeFile(index,html);
+console.log('Updated public files from local Sites source. GitHub Pages origin preserved; commit and push after checking.');

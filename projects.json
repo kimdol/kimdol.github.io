@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 7,
+  "profile": {
+    "name": "KIMDOL",
+    "title": "Game & Web Developer",
+    "bio": "게임의 시스템을 만들고, 웹 도구를 다듬고, 코드와 배움을 연결합니다.",
+    "email": "",
+    "github": "",
+    "website": "https://georeumm.pe.kr/",
+    "demo": false
+  },
+  "projects": [
+    {
+      "id": "syntaxbridge-studio",
+      "title": "SyntaxBridge Studio",
+      "posterTitle": "SYNTAX\nBRIDGE",
+      "subtitle": "Code, Korean, English. Connected.",
+      "category": "Web",
+      "year": "2026",
+      "type": "PROGRAMMING LEARNING PLATFORM",
+      "image": "assets/projects/syntax-cover.jpg",
+      "accent": "#91dfc9",
+      "tags": [
+        "WordPress",
+        "JavaScript",
+        "REST API"
+      ],
+      "summary": "코드와 한국어·영어 설명을 의미 단위로 연결하는 프로그래밍 학습 서비스.",
+      "description": "코드의 한 조각을 선택하면 같은 의미의 한국어·영어 설명을 함께 강조하는 교육용 웹 서비스입니다. WordPress 플러그인으로 학습자 화면과 콘텐츠 관리 화면을 구성하고, 언어·개념·예제·문제 사이의 관계를 관리합니다. 현재 georeumm.pe.kr에서 공개 운영 중입니다.",
+      "role": "학습 인터랙션 · 프론트엔드 · WordPress 플러그인",
+      "contribution": {
+        "role": "개인 프로젝트 · 기획, 학습 콘텐츠 구성, UI/UX, 개발, 테스트, 배포·운영까지 전 과정 담당",
+        "aiTools": "Codex · ChatGPT — 구현, 문제 분석, 검증 보조에 활용"
+      },
+      "duration": "2026 · 공개 운영 중",
+      "challenge": "코드와 설명의 반복되거나 겹치는 부분을 정확히 연결하면서, 많은 학습 자료를 필요한 시점에만 불러오는 구조를 설계했습니다.",
+      "features": [
+        "CODE ↔ 한국어 ↔ English 의미 조각 연결·동시 강조",
+        "언어·개념별 탐색과 검색, 선택 집중 보기",
+        "예제·응용 문제와 한국어·영어 정답 전환",
+        "WordPress 관리자에서 자료 편집·정렬·공개 상태 관리",
+        "개념별 REST API 로딩과 revision·ETag 기반 캐시"
+      ],
+      "demoUrl": "https://georeumm.pe.kr/",
+      "demoLabel": "학습 서비스 열기",
+      "sourceUrl": "",
+      "readmeUrl": "",
+      "links": [],
+      "gallery": [
+        {
+          "src": "assets/projects/syntax-cover.jpg",
+          "caption": "SyntaxBridge Studio · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+        },
+        {
+          "src": "assets/projects/syntaxbridge-mapping-before.png",
+          "caption": "일반 화면 · 조각을 선택하기 전의 학습 예제."
+        },
+        {
+          "src": "assets/projects/syntaxbridge-mapping-after.png",
+          "caption": "실제 print 선택 · CODE와 한국어·영어의 대응 설명이 함께 강조됩니다."
+        },
+        {
+          "src": "assets/projects/syntaxbridge-live.png",
+          "caption": "실제 공개 서비스 · Python 코드와 한국어·영어 설명을 연결하는 학습 화면."
+        },
+        {
+          "src": "assets/projects/syntaxbridge-comments.png",
+          "caption": "학습자 화면 · 코드 주석과 한국어·영어 문제 전환."
+        },
+        {
+          "src": "assets/projects/syntaxbridge-phone.png",
+          "caption": "모바일 학습 레이아웃."
+        }
+      ],
+      "videos": [],
+      "caseStudies": [
+        {
+          "title": "반복·중첩되는 의미의 정확한 연결",
+          "problem": "같은 문자열이 여러 번 나오거나 의미 구간이 겹치면 단순 문자열 치환만으로는 연결 위치를 구분하기 어렵습니다.",
+          "solution": "줄·열 위치로 원문 구간을 지정하고, 각 위치의 매핑 집합을 기준으로 인접 구간을 분할·결합하는 interval segmentation을 사용했습니다.",
+          "result": "원문과 복사할 코드는 보존하면서 코드·한국어·영어의 대응 관계를 함께 강조하도록 구성했습니다.",
+          "codeUrl": ""
+        },
+        {
+          "title": "학습 화면과 콘텐츠 관리의 책임 분리",
+          "problem": "학습 자료의 양이 늘어나도 공개 화면은 빠르게 열리고, 관리자 수정과 공개 상태는 안정적으로 보존되어야 했습니다.",
+          "solution": "PHP Repository와 REST API를 통해 데이터 저장·권한 검사를 분리하고, 탐색 메타데이터와 선택한 개념의 상세 자료를 나누어 요청하도록 구성했습니다.",
+          "result": "학습자는 필요한 개념을 불러오고, 관리자는 언어·개념·예제·문제를 한곳에서 관리할 수 있습니다.",
+          "codeUrl": ""
+        }
+      ],
+      "sourceNote": "공개 서비스와 제공된 로컬 프로젝트의 README·JavaScript·PHP 코드를 바탕으로 정리했습니다.",
+      "mappingDemo": {
+        "before": "assets/projects/syntaxbridge-mapping-before.png",
+        "after": "assets/projects/syntaxbridge-mapping-after.png"
+      }
+    },
+    {
+      "id": "tft-team-optimizer",
+      "title": "TFT 팀 조합 추천기",
+      "posterTitle": "TFT\nOPTIMIZER",
+      "subtitle": "Build smarter. Compare better.",
+      "category": "Web",
+      "year": "2026",
+      "type": "WEB & ANDROID APP",
+      "image": "assets/projects/tft-cover.jpg",
+      "accent": "#b4a3ff",
+      "tags": [
+        "React 19",
+        "TypeScript",
+        "Zustand",
+        "Capacitor",
+        "Beam Search"
+      ],
+      "summary": "후보·고정 유닛과 추가 상징을 바탕으로 팀 조합을 탐색하는 웹·Android 앱.",
+      "description": "후보·고정 유닛과 상징으로 팀을 탐색하는 웹·Android 앱. Beam Search와 탭별 상태 관리로 여러 조합을 비교합니다.",
+      "role": "1인 개발 · 알고리즘 · 웹·Android 클라이언트",
+      "duration": "2026.01.05 — 2026.07.20",
+      "challenge": "팀 전체의 특성 활성 상태에 따라 점수가 달라지는 조합 문제를 제한된 탐색 폭으로 계산하고, 여러 추천 탭의 상태와 결과 유효성을 함께 관리했습니다.",
+      "features": [
+        "Beam Search 기반 조합 탐색과 중복 팀·변형 유닛 방지",
+        "후보·고정·추가 상징·추천 결과의 탭별 독립 관리",
+        "마지막 정상 서버 데이터 보관과 중복 요청 공유",
+        "한글 초성 검색, 코스트·역할군 일괄 선택",
+        "웹·Android 공용 화면과 다국어 UI"
+      ],
+      "demoUrl": "",
+      "demoLabel": "",
+      "sourceUrl": "https://github.com/kimdol/my-tft-app",
+      "readmeUrl": "https://github.com/kimdol/my-tft-app#readme",
+      "links": [
+        {
+          "label": "Android 앱 · Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.UrsusCertamen.TFTool"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/tft-cover.jpg",
+          "caption": "TFT 팀 조합 추천기 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+        }
+      ],
+      "videos": [],
+      "caseStudies": [
+        {
+          "title": "완전 탐색에서 Beam Search로",
+          "problem": "후보 유닛의 모든 조합을 평가하면 조합 수가 빠르게 증가하고, 두 유닛 간 고정 비용만으로 팀 전체 특성을 평가하기 어려웠습니다.",
+          "solution": "팀 전체를 상태로 보고 단계마다 점수가 높은 일부 후보만 남겼습니다. 정렬된 팀 ID와 visited로 중복 경로를 제거하고 baseId로 변형 유닛 중복을 확인합니다.",
+          "result": "탐색 폭을 조절해 후보 확장 범위를 제한하면서 여러 고득점 팀을 비교할 수 있도록 구현했습니다. 전역 최적해를 보장하는 방식은 아닙니다.",
+          "codeUrl": "https://github.com/kimdol/my-tft-app/blob/main/vite-project/src/features/core/beamSearchOptimizer.ts"
+        },
+        {
+          "title": "공용 데이터와 탭별 작업 상태",
+          "problem": "여러 추천 탭에서 서로 다른 선택을 유지하고, 입력이 바뀌었을 때 이전 결과가 그대로 노출되지 않도록 해야 했습니다.",
+          "solution": "원본 챔피언·특성 데이터는 공유하고 선택 ID·설정·결과는 탭별로 분리했습니다. 결과에 입력 signature를 저장해 현재 조건과 비교합니다.",
+          "result": "탭을 이동해도 작업을 이어갈 수 있고, 조건이 달라진 결과는 무효화하도록 정리했습니다.",
+          "codeUrl": "https://github.com/kimdol/my-tft-app/blob/main/vite-project/src/features/team-builder/recommendationSignature.ts"
+        },
+        {
+          "title": "응답 검증과 마지막 정상 데이터",
+          "problem": "운영 중 시즌 데이터가 변경되거나 네트워크 요청에 실패해도 앱이 사용할 수 있는 데이터를 유지해야 했습니다.",
+          "solution": "서버 응답의 구조를 검증해 내부 모델로 변환하고 요청을 공유합니다. 정상 데이터를 보관하고 화면 복귀·온라인 이벤트에서 다시 확인합니다.",
+          "result": "호환되는 서버 데이터와 계산 설정은 Android 앱을 다시 빌드하지 않고 반영하도록 구성했습니다.",
+          "codeUrl": "https://github.com/kimdol/my-tft-app/blob/main/vite-project/src/features/api/tftApi.ts"
+        }
+      ],
+      "sourceNote": "README와 공개 소스, 운영 웹 앱을 바탕으로 정리했습니다. Riot Games가 후원하거나 보증하는 공식 앱이 아닌 팬 프로젝트입니다."
+    },
+    {
+      "id": "unreal-combat",
+      "title": "Unreal 전투 게임",
+      "posterTitle": "COMBAT\nCENTRIC",
+      "subtitle": "AI that reads the battlefield.",
+      "category": "Unreal Engine",
+      "year": "2024",
+      "type": "COMBAT AI & GAMEPLAY",
+      "image": "assets/projects/unreal-cover.jpg",
+      "accent": "#e8afcf",
+      "tags": [
+        "Unreal Engine 5.3",
+        "C++",
+        "GAS",
+        "Behavior Tree",
+        "EQS"
+      ],
+      "summary": "Behavior Tree·EQS와 Gameplay Ability System으로 구성한 전투 게임.",
+      "description": "순찰·엄폐·사격 위치를 판단하는 AI와 GAS 기반 전투를 구현한 Unreal Engine 5.3 개인 프로젝트입니다.",
+      "role": "1인 개발 · 전투 AI · C++ 게임플레이",
+      "duration": "2024.03.17 — 2024.09.25",
+      "challenge": "AI의 탐지·이동·공격 상태를 확장할 수 있게 구성하고, 공격 능력·효과·속성 계산을 공통 시스템으로 처리했습니다.",
+      "features": [
+        "Behavior Tree 기반 순찰·탐지·엄폐 행동",
+        "EQS의 Grid·Trace·Distance를 활용한 사격 위치 탐색",
+        "GAS 기반 능력·효과·속성 처리와 UI 이벤트",
+        "공격력·방어력·DamageRate를 이용한 데미지 계산",
+        "노이즈와 임계값을 이용한 디졸브 소멸 연출"
+      ],
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/kimdol/Unreal_Project",
+      "readmeUrl": "https://github.com/kimdol/Unreal_Project#readme",
+      "links": [],
+      "gallery": [
+        {
+          "src": "assets/projects/unreal-cover.jpg",
+          "caption": "Unreal 전투 게임 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+        },
+        {
+          "src": "assets/projects/unreal-ai.png",
+          "caption": "정찰병 AI의 Behavior Tree."
+        },
+        {
+          "src": "assets/projects/unreal-eqs.png",
+          "caption": "원거리 공격 위치를 찾는 EQS 구성."
+        },
+        {
+          "src": "assets/projects/unreal-dissolve.png",
+          "caption": "디졸브 효과 구성."
+        }
+      ],
+      "videos": [
+        {
+          "title": "정찰병 AI · 순찰과 엄폐",
+          "url": "https://www.youtube.com/watch?v=RkRz2BjRmJM"
+        },
+        {
+          "title": "마법 전투병 · 사격 위치 탐색",
+          "url": "https://www.youtube.com/watch?v=vADQb_kspTE"
+        },
+        {
+          "title": "공격과 피격 · GAS",
+          "url": "https://www.youtube.com/watch?v=rXJIfTRE2R0"
+        },
+        {
+          "title": "디졸브 소멸 효과",
+          "url": "https://www.youtube.com/watch?v=WAVaeNaUJAk"
+        },
+        {
+          "title": "NPC AI",
+          "url": "https://www.youtube.com/watch?v=_4IKRpVNUd8"
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "행동 트리와 공간 질의의 결합",
+          "problem": "순찰·탐지·도주와 원거리 공격 행동이 늘어나면서 상태 전환을 관리하고 적절한 공격 위치를 찾을 필요가 있었습니다.",
+          "solution": "Behavior Tree로 행동을 구성하고 Blackboard 조건을 통해 전환했습니다. 원거리 전투에는 EQS의 시야·거리 테스트를 적용했습니다.",
+          "result": "정찰병과 마법 전투병이 서로 다른 행동 규칙으로 플레이어에 대응하도록 구성했습니다.",
+          "codeUrl": "https://github.com/kimdol/Unreal_Project#readme"
+        },
+        {
+          "title": "GAS를 통한 공격·속성 처리",
+          "problem": "AI와 플레이어가 공통된 공격·피격 규칙을 사용하면서 공격별 배율을 적용해야 했습니다.",
+          "solution": "Gameplay Effect 실행 계산에서 Source의 공격력과 Target의 방어력을 캡처하고 SetByCaller의 Attack.DamageRate를 적용했습니다.",
+          "result": "계산 결과가 양수일 때 체력에 modifier를 적용하고, 속성 변화는 이벤트로 UI에 전달하도록 구성했습니다.",
+          "codeUrl": "https://github.com/kimdol/Unreal_Project/blob/main/Combat_Centric_Game/Source/Combat_Centric_Game/Private/BasicDamageCalculate.cpp"
+        }
+      ],
+      "sourceNote": "대표 이미지는 본인 XBot Mage AI 시연 영상의 실제 플레이 화면을 다시 촬영해 구성했습니다. 구현 내용은 GitHub README·C++ 소스와 연결된 본인 시연 영상을 바탕으로 정리했습니다."
+    },
+    {
+      "id": "unity-arpg",
+      "title": "Unity ARPG",
+      "posterTitle": "ACTION\nRPG",
+      "subtitle": "Systems behind every adventure.",
+      "category": "Unity",
+      "year": "2022",
+      "type": "ACTION ROLE-PLAYING GAME",
+      "image": "assets/projects/unity-cover.jpg",
+      "accent": "#c7b2ef",
+      "tags": [
+        "Unity",
+        "C#",
+        "Firebase",
+        "MVC",
+        "Object Pooling"
+      ],
+      "summary": "전투·인벤토리·대화·퀘스트를 시스템 단위로 구성한 1인 개발 ARPG.",
+      "description": "전투, 인벤토리, 대화와 퀘스트를 시스템으로 나누어 구현한 Unity 액션 RPG입니다.",
+      "role": "1인 개발 · 게임플레이와 공통 시스템",
+      "duration": "2022.03.10 — 2022.10.12",
+      "challenge": "데이터·화면·입력의 책임을 나누고, 반복되는 생성·소멸과 매 프레임 확인을 이벤트·풀링 구조로 개선했습니다.",
+      "features": [
+        "시야각·장애물·거리 기반 적 인식과 상태 머신",
+        "MVC 구조와 슬롯 이벤트 기반 인벤토리·장비 UI",
+        "Queue와 Coroutine을 활용한 NPC 대화",
+        "Dictionary·Queue 기반 프리팹 풀링",
+        "Firebase 인증·순위, 퀘스트·씬 전환·CSV 마샬링"
+      ],
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/kimdol/Portfolio",
+      "readmeUrl": "https://github.com/kimdol/Portfolio#readme",
+      "links": [],
+      "gallery": [
+        {
+          "src": "assets/projects/unity-cover.jpg",
+          "caption": "Unity ARPG · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+        },
+        {
+          "src": "assets/projects/arpg-inventory.png",
+          "caption": "인벤토리 UI의 클래스 구조."
+        },
+        {
+          "src": "assets/projects/arpg-stats.png",
+          "caption": "능력치 시스템의 클래스 구조."
+        }
+      ],
+      "videos": [
+        {
+          "title": "ARPG 프로젝트 설명 영상",
+          "url": "https://youtu.be/USFFC2Ag4UM"
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "인벤토리의 역할 분리와 이벤트 갱신",
+          "problem": "인벤토리 데이터·UI·입력 처리가 밀접하게 연결되면 기능 수정 시 영향을 추적하기 어려웠습니다.",
+          "solution": "InventoryObject와 UI 계층을 나누고, 슬롯의 OnPostUpdate 이벤트를 구독해 표시를 갱신했습니다. Unity EventTrigger로 포인터·드래그 입력을 연결했습니다.",
+          "result": "고정·동적 슬롯 UI를 공통 추상 클래스에서 확장하며 데이터 변경 시 화면을 갱신하는 구조로 정리했습니다.",
+          "codeUrl": "https://github.com/kimdol/Portfolio/blob/master/ARPG/Assets/ARPG/InventorySystem/UIs/InventoryUI.cs"
+        },
+        {
+          "title": "프리팹 캐시와 대화 흐름 관리",
+          "problem": "적·발사체 등 반복 생성되는 오브젝트와 순차적인 대화 문장을 효율적으로 다뤄야 했습니다.",
+          "solution": "프리팹 경로별 Dictionary와 Queue로 비활성 오브젝트를 재사용하고, 대화 문장은 Queue와 Coroutine으로 순서·타이핑 효과를 처리했습니다.",
+          "result": "객체 재사용과 비동기적 문장 출력을 별도 시스템으로 구성해 게임플레이와 UI의 책임을 나눴습니다.",
+          "codeUrl": "https://github.com/kimdol/Portfolio/tree/master/ARPG/Assets/ARPG/PrefabCacheSystem"
+        }
+      ],
+      "sourceNote": "대표 이미지는 본인 프로젝트 설명 영상 1분 5초의 실제 플레이 화면을 다시 촬영해 구성했습니다. 갤러리의 구조도는 README 자료입니다."
+    },
+    {
+      "id": "cpp-directx-lab",
+      "title": "C++ · DirectX 실습",
+      "posterTitle": "C++\nDIRECTX",
+      "subtitle": "From native code to pixels.",
+      "category": "C++",
+      "year": "2021",
+      "type": "NATIVE GRAPHICS & MINI GAMES",
+      "image": "assets/projects/cpp-cover.jpg",
+      "accent": "#f4cf8f",
+      "tags": [
+        "C++",
+        "Win32",
+        "Direct2D",
+        "Direct3D",
+        "DirectXTK"
+      ],
+      "summary": "Windows 프로그래밍과 그래픽스 기초를 직접 만든 작은 프로그램으로 학습한 기록.",
+      "description": "C++로 Windows 입력과 그래픽스의 기초를 학습한 기록. 작은 2D 게임부터 DirectXTK 스프라이트까지 구현했습니다.",
+      "role": "1인 학습 · C++ 및 그래픽스 구현",
+      "duration": "2021.06.07 — 2021.12.23",
+      "challenge": "엔진이 제공하는 기능 아래에서 입력·업데이트·렌더링과 그래픽 리소스의 수명 주기를 이해하고 구현하는 데 집중했습니다.",
+      "features": [
+        "Win32 윈도 생성과 메시지 처리",
+        "카드 짝 맞추기 · 클릭으로 벌레 잡기 2D 게임",
+        "WIC 이미지 로딩과 Direct2D·Direct3D 실습",
+        "DirectXTK SpriteBatch 기반 스프라이트 출력",
+        "RapidJSON으로 프레임 좌표를 읽는 애니메이션"
+      ],
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/kimdol/GameClass",
+      "readmeUrl": "https://github.com/kimdol/GameClass#readme",
+      "links": [],
+      "gallery": [
+        {
+          "src": "assets/projects/cpp-cover.jpg",
+          "caption": "C++ · DirectX 실습 · 실제 프로젝트 화면을 균형 있게 구성한 대표 이미지."
+        },
+        {
+          "src": "assets/projects/bugghouse.png",
+          "caption": "BuggHouse · 클릭으로 벌레 잡기 게임."
+        },
+        {
+          "src": "assets/projects/solitaire.png",
+          "caption": "카드 짝 맞추기 게임 실행 화면."
+        },
+        {
+          "src": "assets/projects/directx-01.png",
+          "caption": "DirectXTK · SpriteBatch 출력 실습."
+        },
+        {
+          "src": "assets/projects/directx-02.png",
+          "caption": "DirectXTK 실행 화면."
+        },
+        {
+          "src": "assets/projects/directx-03.png",
+          "caption": "DirectXTK 실행 화면."
+        }
+      ],
+      "videos": [],
+      "caseStudies": [
+        {
+          "title": "JSON 데이터로 구동하는 스프라이트",
+          "problem": "스프라이트 시트의 이미지 구간과 시간에 따른 프레임 변경을 프로그램에서 직접 다뤄야 했습니다.",
+          "solution": "RapidJSON으로 프레임 사각형을 읽고, 타이머로 현재 프레임을 변경한 뒤 DirectXTK SpriteBatch로 해당 이미지 구간을 그렸습니다.",
+          "result": "데이터 로딩·업데이트·렌더링을 분리하고 디바이스 재생성 시 리소스를 다시 준비하는 흐름을 학습했습니다.",
+          "codeUrl": "https://github.com/kimdol/GameClass/blob/main/DirectXTK/Game.cpp"
+        }
+      ],
+      "sourceNote": "학습 프로젝트입니다. README의 실습 목록·실행 이미지와 DirectXTK 소스를 바탕으로 정리했습니다."
+    }
+  ]
+}

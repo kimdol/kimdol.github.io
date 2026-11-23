@@ -1,0 +1,95 @@
+/* The first screen remains useful. The following sequence is an actual camera journey. */
+.portal-cinema .theater-entry{height:auto;min-height:0}
+.portal-cinema .hero{position:relative;height:100svh;min-height:690px}
+.portal-cinema .hero-heading{transform:none;opacity:1}
+.portal-cinema .cinema{transform:none}
+.portal-cinema .theater-seats{opacity:.65;transform:translateX(-50%) translateY(35px)}
+.portal-cinema .project-card:nth-child(n) .project-open{transform:none;will-change:auto}
+.portal-cinema .card-resource-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:24px;border-top:1px solid #a6d66c25;padding-top:16px;justify-content:flex-start}
+.portal-cinema .card-resource-links a,.portal-cinema .card-resource-links button{font-size:11px;color:#c6d6b4;padding:8px 0;border-bottom:1px solid #b9dd6650}
+.portal-cinema .card-resource-links .store-link{color:var(--lime);border:1px solid #bde24760;padding:8px 15px;border-radius:3px;background:#c8ff5210}
+.portal-cinema .contact-links{flex-wrap:wrap;justify-content:flex-end;max-width:540px;gap:8px 20px}
+.portal-cinema .contact-links a{font-size:11px;padding:8px 0}
+.portal-sequence{height:440svh;position:relative;background:#030608;--portal-rush:0;--portal-intro:1}
+.portal-stage{height:100svh;min-height:550px;position:sticky;top:0;overflow:hidden;background:#030608;isolation:isolate}
+.portal-stage canvas{display:block;position:absolute;inset:0;width:100%;height:100%}
+.portal-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(#030608c4,transparent 24%,transparent 65%,#030608e8),radial-gradient(ellipse at 50% 46%,transparent 30%,#03060865 100%);box-shadow:inset 0 0 90px #0007}
+.portal-heading{position:absolute;top:8%;left:6%;right:6%;font-size:clamp(23px,3.7vw,52px);letter-spacing:-1.6px;line-height:1.25;margin:0;opacity:var(--portal-intro);pointer-events:none}
+.portal-skip{position:absolute;right:5%;top:28px;z-index:3;font-size:11px;color:#c9d3c4;border-bottom:1px solid #829a6d50;padding:10px 0;text-shadow:0 2px 6px #000}
+.portal-caption{position:absolute;bottom:8%;left:6%;right:6%;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:3;opacity:calc(1 - var(--portal-rush)*.5)}
+.portal-caption h3{font-size:clamp(25px,4vw,52px);font-weight:600;line-height:1.2;letter-spacing:-1.5px;margin:0;text-shadow:0 4px 24px #000}
+.portal-caption button{font-size:12px;padding:14px 22px;border:1px solid #bada795e;background:#0a140e9c;backdrop-filter:blur(10px);color:#d5ff83;border-radius:3px;white-space:nowrap}
+.portal-caption button:hover{background:#d5ff52;color:#111}
+.portal-scroll-cue{position:absolute;left:6%;top:20%;font-size:12px;line-height:1.8;z-index:2;color:#bbceae;opacity:var(--portal-intro);pointer-events:none}
+.portal-scroll-cue span{display:block;font-size:26px;padding-top:5px}
+.portal-disabled{display:none}
+.portal-ongoing{font-size:12px;letter-spacing:1px;color:#bfd7cc;line-height:1.8}
+.portal-stage[data-phase="continuing"] .portal-caption{opacity:1}
+.portal-stage[data-phase="continuing"] .portal-caption h3{font-family:var(--display);font-size:clamp(35px,5vw,68px);font-weight:600;letter-spacing:.2px}
+.portal-stage[data-phase="continuing"] .portal-lens{opacity:0}
+@media(max-width:700px){
+  .portal-cinema .hero{min-height:680px}
+  .portal-cinema .theater-seats{transform:translateX(-50%) translateY(65px) scale(.8)}
+  .portal-sequence{height:410svh}
+  .portal-stage{min-height:570px}
+  .portal-heading{top:12%;font-size:26px;max-width:280px;letter-spacing:-1px}
+  .portal-skip{font-size:10px;top:18px}
+  .portal-scroll-cue{top:23%;font-size:11px}
+  .portal-caption{bottom:8%;flex-direction:column;align-items:flex-start;gap:15px}
+  .portal-caption h3{font-size:30px;letter-spacing:-1px}
+  .portal-caption button{font-size:11px;padding:11px 17px}
+  .portal-cinema .card-resource-links{gap:7px 15px;margin-top:18px;padding-top:12px}
+  .portal-cinema .card-resource-links a,.portal-cinema .card-resource-links button{font-size:10px}
+  .portal-cinema .contact-links{justify-content:flex-start;max-width:none}
+}
+@media(prefers-reduced-motion:reduce){.portal-sequence{display:none}}
+.motion-off .portal-sequence{display:none}
+
+.portal-sequence{scroll-margin-top:-100px}@media(max-width:700px){.portal-sequence{scroll-margin-top:-25px}}
+
+/* One exhibition, one heading, one active presentation. */
+.unified-portfolio .hero{height:74svh;min-height:555px;max-height:780px;position:relative;background:radial-gradient(ellipse at 50% 76%,#8ac73d12,transparent 60%)}
+.unified-portfolio .hero-heading{padding-top:clamp(125px,17vh,175px);z-index:3}
+.unified-portfolio .hero h1{font-size:clamp(64px,8.5vw,120px)}
+.unified-portfolio .hero-description{font-size:12px;color:#aeb99f}
+.unified-portfolio .hero-bottom{bottom:28px;z-index:4}
+.intro-orbit{position:absolute;width:440px;height:200px;left:50%;bottom:-10px;transform:translateX(-50%);pointer-events:none;opacity:.55}
+.intro-orbit i{position:absolute;inset:15% 0;border:1px solid #c9ff5340;border-radius:50%;transform:rotate(-18deg);box-shadow:0 0 35px #adf24408}
+.intro-orbit i:nth-child(2){transform:rotate(18deg);inset:28% -10%}.intro-orbit i:nth-child(3){inset:5% 15%;transform:rotate(-45deg)}
+.intro-orbit span{position:absolute;inset:0;display:grid;place-items:center;font-size:115px;font-weight:900;font-style:italic;color:#d5ff52;filter:drop-shadow(0 0 35px #cbff5220)}
+.unified-portfolio .work{max-width:none;margin:0;padding:65px 0 0;perspective:none;background:#030608}
+.unified-portfolio .work>.section-top{padding:0 6%;margin:0 auto 36px;max-width:1440px}
+.unified-portfolio .work .section-top h2{font-size:clamp(40px,5.3vw,72px)}
+.work-fallback{max-width:1440px;margin:auto;padding:0 6% 75px}
+.portal-enabled .work-fallback{display:none}
+.portal-enabled .portal-sequence{display:block}
+.unified-portfolio .portal-sequence{width:100%;margin:0;scroll-margin-top:0}
+.unified-portfolio .portal-heading{display:none}
+.unified-portfolio .portal-caption{bottom:15%;align-items:flex-end}
+.portal-project{min-width:0}
+.portal-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:16px}
+.portal-links a{font-size:12px;color:#cbdab7;border-bottom:1px solid #a6ce5c66;padding:7px 0;text-shadow:0 2px 8px #000}
+.portal-links a:hover{color:var(--lime)}
+.portal-navigation{position:absolute;left:6%;bottom:5%;display:flex;gap:17px;align-items:center;z-index:3}
+.portal-navigation>button{width:37px;height:37px;border:1px solid #bdde6d55;border-radius:50%;background:#08120c88;color:#d7edb6;font-size:21px}
+.portal-dots{display:flex;gap:8px;align-items:center}
+.portal-dot{width:24px;height:30px;padding:0;position:relative}
+.portal-dot:after{content:'';display:block;width:7px;height:7px;border:1px solid #a5bb82;border-radius:50%;margin:auto;transition:background .2s,box-shadow .2s}
+.portal-dot[aria-current="true"]:after{background:var(--lime);border-color:var(--lime);box-shadow:0 0 14px #cfff6688;width:10px;height:10px}
+.portal-lens{position:absolute;left:0;right:0;top:49%;height:2px;opacity:var(--cross-flare,0);z-index:2;pointer-events:none;background:linear-gradient(90deg,transparent,#adf5de,#f5ffe7,#adf5de,transparent);box-shadow:0 0 26px 6px #a3f8d955,0 0 80px 20px #a3f8d922;mix-blend-mode:screen}
+.unified-portfolio .about{display:block;max-width:1100px;padding:85px 6%;border-top:1px solid #b9dd5f25}
+.unified-portfolio .about-copy{max-width:700px}
+.unified-portfolio .about h2{font-size:clamp(38px,5vw,65px)}
+.closing-link{display:inline-block;margin-top:25px;color:#c5dba7;border-bottom:1px solid #b4d56466;padding:10px 0;font-size:12px}
+@media(max-width:700px){
+ .unified-portfolio .hero{height:76svh;min-height:570px}
+ .unified-portfolio .hero-heading{padding-top:140px}
+ .unified-portfolio .hero h1{font-size:clamp(46px,11.8vw,77px)}
+ .unified-portfolio .hero-description{font-size:11px}
+ .intro-orbit{width:300px;height:180px;bottom:0}.intro-orbit span{font-size:95px}
+ .unified-portfolio .work{padding-top:40px}.unified-portfolio .work>.section-top{margin-bottom:20px}
+ .unified-portfolio .portal-caption{bottom:20%;align-items:flex-start}
+ .portal-caption h3{font-size:27px}.portal-links{gap:12px;margin-top:10px}.portal-links a{font-size:11px}
+ .portal-navigation{bottom:7%;gap:16px}.portal-navigation>button{width:34px;height:34px}
+ .unified-portfolio .about{padding:55px 6%}
+}

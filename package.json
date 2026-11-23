@@ -1,0 +1,11 @@
+{
+  "name": "kimdol-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KIMDOL developer portfolio, hosted with GitHub Pages",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check app.js && node --check screening.js && node --check portal.js && node --check studio.js && node scripts/check.mjs && node scripts/check-camera.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a09">
+  <meta name="description" content="KIMDOL의 개발 포트폴리오. SyntaxBridge Studio, TFT 웹·Android 앱, Unity ARPG, Unreal 전투 AI, C++·DirectX 프로젝트를 소개합니다.">
+  <meta property="og:title" content="KIMDOL — Game & Web Developer"><meta property="og:description" content="게임 시스템에서 웹과 교육 서비스까지. 실제 코드, 시연 영상, 문제 해결의 기록.">
+  <title>KIMDOL — Game & Web Developer</title>
+  <link rel="canonical" href="https://kimdol.github.io/">
+  <meta property="og:url" content="https://kimdol.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="project-details.css"><link rel="stylesheet" href="cinema.css"><link rel="stylesheet" href="portal.css"><link rel="stylesheet" href="catalog.css"><script src="screening.js" defer></script><script src="app.js" defer></script><script type="module" src="portal.js"></script>
+</head>
+<body class="cinematic unified-portfolio catalog-first">
+  <a class="skip-link" href="#work">프로젝트로 바로 가기</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="KIMDOL 홈"><span class="brand-icon" aria-hidden="true">k</span>KIMDOL<span class="brand-dot">/ DEV</span></a>
+    <nav aria-label="메인 메뉴"><a href="#work" class="nav-work">프로젝트 <span>05</span></a><a href="#journey" class="journey-nav">포털</a><a href="#about">소개</a><button class="motion-control" id="motion-toggle" aria-pressed="false"><span aria-hidden="true">◉</span> MOTION ON</button></nav>
+    <span class="availability"><i></i> GAMES · WEB · LEARNING</span>
+  </header>
+
+  <main>
+    <section class="work section-wrap" id="work" aria-labelledby="work-heading">
+      <div class="section-top"><div><p class="eyebrow"><span class="section-no">01 /</span> SELECTED FILMS</p><h1 id="work-heading">Selected <span>work.</span></h1></div><p class="section-description">각기 다른 기술, 하나의 몰입.<br>직접 만들고 탐구한 인터랙티브 경험들.</p></div>
+      <p class="catalog-lead">게임 시스템부터 웹 서비스까지. 직접 만든 다섯 프로젝트.</p><div class="hero-error" id="hero-error" hidden><p>프로젝트를 불러오지 못했습니다.</p><button onclick="location.reload()">다시 시도</button></div>
+      <div class="work-fallback"><div class="work-toolbar"><div class="filters" role="group" aria-label="기술별 프로젝트 필터"><button class="active" data-filter="all" aria-pressed="true">All <sup>05</sup></button><button data-filter="C++" aria-pressed="false">C++</button><button data-filter="Unity" aria-pressed="false">Unity</button><button data-filter="Unreal Engine" aria-pressed="false">Unreal Engine</button><button data-filter="Web" aria-pressed="false">Web / App</button></div><label class="search-label"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="프로젝트 · 기술 검색" aria-label="프로젝트 검색"></label></div>
+      <div class="archive-meta"><span>PROJECT COLLECTION <span class="demo-dot"></span> 실제 프로젝트 · 2021—2026</span><span id="result-count" aria-live="polite">5 PROJECTS</span></div>
+      <div class="project-grid" id="project-grid"></div><p class="empty-state" id="empty-state" hidden>일치하는 프로젝트가 없습니다. 다른 키워드로 찾아보세요.<button id="reset-filters">필터 초기화 ↗</button></p>
+      <p class="archive-note">현재 전시된 작품은 사이트 구성을 보여주는 데모입니다. 실제 프로젝트로 자유롭게 교체할 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="journey-section" id="journey" aria-labelledby="journey-heading"><div class="journey-intro"><h2 id="journey-heading">Beyond the <span>screen.</span></h2><p>이번에는 작품의 세계를 통과해 보세요.</p></div><div class="portal-host"></div></section>
+
+    <section class="about section-wrap" id="about" aria-labelledby="about-heading"><div class="about-copy"><h2 id="about-heading">Different tools.<br><span>Same curiosity.</span></h2><p class="about-lead">게임의 시스템부터<br>사람이 사용하는 서비스까지.</p><p id="profile-bio"></p><a class="closing-link" href="#work">프로젝트 다시 보기 ↑</a></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#">KIMDOL</a><p>GAMES. WEB. LEARNING.</p><span>© <span id="year">2026</span> <span id="copyright-name">KIMDOL</span> · MADE WITH INTENTION.</span></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><button id="close-dialog" class="dialog-close" aria-label="상세 화면 닫기">✕</button><div id="dialog-content"></div></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <noscript><p class="noscript">프로젝트 탐색 기능을 사용하려면 JavaScript를 활성화해주세요.</p></noscript>
+</body></html>
